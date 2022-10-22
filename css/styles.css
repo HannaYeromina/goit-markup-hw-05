@@ -60,6 +60,7 @@ header {
     padding: 0;
 }
 .nav {
+    position: relative;
     display: block;
     padding: 32px 0;
     font-weight: 500;
@@ -75,8 +76,22 @@ header {
 .list-nav:last-child{
     margin-right: 0;
 }
+.list-nav::after {
+    content: "";
+    display: block;
+    background-color: #2196f3;
+    height: 4px;
+    cursor: pointer;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.list-nav:hover::after,
+.list-nav:focus::after {
+    opacity: 1;
+}
 .nav:hover {
-    color: #2196f3 ;
+    color: #2196f3;
 }
 .contact{
     display: flex;
@@ -201,6 +216,7 @@ header {
 }
 .second-list {
     display: flex;
+    position: relative;
 }
 .images {
     width: 370px;
@@ -213,6 +229,22 @@ header {
     display: block;
     max-width: 100%;
     height: auto;
+}
+.second-p {
+    position: absolute;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.41px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    width: 370px;
+    height: 70px;
+    background-color: #2f303a;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 27px;
+    opacity: 0.8;
 }
 .employees-section{
     padding: 94px 0;
@@ -392,7 +424,39 @@ header {
     margin-right: 0;
     
 }
-.button-box{
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden { 
+    opacity: 0;
+    pointer-events: none;
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 528px;
+    height: 581px;
+    background-color: #ffffff;
+}
+.button-modal {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    width: 30px;
+    height: 30px;
+    color: #000000;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.1);
+}
+.button-box {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -449,15 +513,24 @@ header {
     text-decoration: none;
     color: inherit;
     display: block;
+    box-shadow: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-list-a:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.portfolio{
+.portfolio {
     display: block;
     max-width: 100%;
     height: auto;
+}
+.portfolio-overlay {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-list:hover .overlay {
+    transform: translatey(0);
 }
 .title-portfolio {
     font-weight: 700;
@@ -471,6 +544,25 @@ header {
     line-height: 30px;
     letter-spacing: 0.03em;
     color: #757575;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    width: 370px;
+    height: 294px;
+    cursor: pointer;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translatey(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.overlay>p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #ffffff;
+    padding-top: 61px;
+    padding-left: 24px;
 }
 .border{
     border-left:1px solid #eeeeee ;
