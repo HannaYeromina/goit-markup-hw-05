@@ -69,6 +69,10 @@ header {
     letter-spacing: 0.02em;
     text-decoration: none;
     color: #000000;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.nav:hover {
+    color: #2196f3;
 }
 .list-nav {
     margin-right: 50px;
@@ -76,24 +80,18 @@ header {
 .list-nav:last-child{
     margin-right: 0;
 }
-.list-nav::after {
+.nav-this {
+    color: #2196f3;
+}
+.list-nav-this::after {
     content: "";
     display: block;
     background-color: #2196f3;
     height: 4px;
     cursor: pointer;
     border-radius: 2px;
-    opacity: 0;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.list-nav:hover::after,
-.list-nav:focus::after {
-    opacity: 1;
-}
-.nav:hover {
-    color: #2196f3;
-}
-.contact{
+.contact {
     display: flex;
     justify-content: flex-end;
     margin-left: auto;
@@ -110,6 +108,8 @@ header {
     fill: #757575;
     display: flex;
     align-items: center;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-header:hover {
     color: #2196f3;
@@ -232,6 +232,7 @@ header {
 }
 .second-p {
     position: absolute;
+    display: flex;
     bottom: 0;
     font-weight: 700;
     font-size: 14px;
@@ -242,8 +243,8 @@ header {
     height: 70px;
     background-color: #2f303a;
     color: #ffffff;
-    text-align: center;
-    padding-top: 27px;
+    align-items: center;
+    justify-content: center;
     opacity: 0.8;
 }
 .employees-section{
@@ -301,6 +302,8 @@ header {
     outline: 1px solid #ffffff;
     border-radius: 50%;
     fill: #afb1b8;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-network:hover {
     background-color: #2196f3;
@@ -323,6 +326,8 @@ header {
     width: 170px;
     height: 92px;
     fill: #afb1b8;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customers-list:hover{
     border-color: #2196f3;
@@ -360,6 +365,7 @@ header {
     text-decoration: none;
     font-style: normal;
     margin-bottom: 9px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-footer:hover {
     color:#2196f3 ;
@@ -372,6 +378,7 @@ header {
     text-decoration: none;
     font-style: normal;
     margin-bottom: 9px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-footer:last-child {
     margin-bottom: 0;
@@ -402,7 +409,8 @@ header {
 }
 .employees-networks-footer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 10px;
 }
 .box-network-footer {
     display: flex;
@@ -412,17 +420,11 @@ header {
     height: 44px;
     border-radius: 50%;
     fill: #ffffff;
-    background-color:rgba(255, 255, 255, 0.1) ;
+    background-color:rgba(255, 255, 255, 0.1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .box-network-footer:hover {
     background-color: #2196f3;
-}
-.box-network-m {
-    margin-right: 10px;
-}
-.box-network-m:last-child {
-    margin-right: 0;
-    
 }
 .backdrop {
     position: fixed;
@@ -480,6 +482,9 @@ header {
     cursor: pointer;
     border-radius: 4px;
     padding: 6px 22px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                box-shadow: 0px 4px rgba(0, 0, 0, 0.25); 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-portfolio-section{
     padding-top: 94px;
@@ -534,7 +539,7 @@ header {
     position: relative;
     overflow: hidden;
 }
-.portfolio-list:hover .overlay {
+.portfolio-list-a:hover .overlay {
     transform: translatey(0);
 }
 .title-portfolio {
