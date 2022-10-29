@@ -165,6 +165,88 @@ header {
     cursor: pointer;
     border-radius: 4px;
 }
+.form-modal {
+    padding: 0 40px;
+}
+.form-p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 23.44px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    padding-top: 40px;
+}
+.form-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.06px;
+    letter-spacing: 0.01em;
+    color: #757575;
+}
+.form-input {
+    width: 448px;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.form-input:hover,
+.form-input:focus {
+    border-color: #2196f3;
+}
+.form-icon:hover,
+.form-icon:focus {
+    fill: #2196f3; 
+}
+.form-box {
+    position: relative;
+}
+.form-icon {
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    fill: #212121;
+}
+.form-comment {
+    width: 448px; 
+    height: 120px;  
+    margin-bottom: 50px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+.form-agreement {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #757575;
+    margin-bottom: 30px;
+}
+.form-a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: #2196F3;
+}
+.form-button {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    background-color: #2196f3;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+}
 .work-section {
     padding-top: 94px;
 }
@@ -340,6 +422,7 @@ header {
     margin-right: 0;
 }
 .footer {
+    display: flex;
     background-color: #2f303a;
     margin: auto;
     padding-top: 60px;
@@ -407,6 +490,9 @@ header {
     text-transform: uppercase;
     margin-bottom: 20px;
 }
+.footer-network {
+    margin-right: 93px;
+}
 .employees-networks-footer {
     display: flex;
     justify-content: center;
@@ -425,6 +511,55 @@ header {
 }
 .box-network-footer:hover {
     background-color: #2196f3;
+}
+.label-input-footer {
+    width: 358px;
+    display: inline-block;
+    margin-right: 12px;
+}
+.label-footer {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16.41px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.input-footer {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+    width: 358px;
+    height: 50px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding-left: 16px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    background-color: #2f303a;
+}
+.form-footer-button {
+    width: 200px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 0.06em;
+    color: #ffffff;
+    align-items: center;
+    background: #2196F3;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+}
+.form-footer-button-icon {
+    position: relative;
+    top: 6px;
+    margin-left: 10px;
+    fill: #ffffff;
 }
 .backdrop {
     position: fixed;
@@ -482,9 +617,7 @@ header {
     cursor: pointer;
     border-radius: 4px;
     padding: 6px 22px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-                box-shadow: 0px 4px rgba(0, 0, 0, 0.25); 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-portfolio-section{
     padding-top: 94px;
